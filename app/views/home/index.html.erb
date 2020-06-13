@@ -6,32 +6,34 @@
  
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     
+   
   </head>
  
   <body>
     <div class="header">
       <ul class="menu">
         <li>
-          <h1 class="app-title">
-           <%= link_to("Ofina de Manutenção", "/") %>
-          </h1>
+            <h1>Oficina de Manutenção</h1>
+
         
-        <% if user_signed_in? %>
+            <% if user_signed_in? %>
+               
+                </li>
+                <li class="menu-item"><%= link_to("Estoque", "/estoques#index") %></li>
+                <li class="menu-item"><%= link_to("Ordens de serviço", "/clientes#index") %> </li>
 
-        </li>
-        <li class="menu-item"><%= link_to("Estoque", "/estoques#index") %></li>
-        <li class="menu-item"><%= link_to("Ordens de serviço", "/clientes#index") %> </li>
+                <li class="menu-item sign-out">
+                <%= link_to("Sign Out", "/users/sign_out", method: :delete) %>
+                </li>
 
-          <li class="menu-item sign-out">
-            <%= link_to("Sign Out", "/users/sign_out", method: :delete) %>
-          </li>
-        <% else %>
-          <li class="menu-item sign-in">
-            <%= link_to("Sign In", "/users/sign_in") %>
-          </li>
-          <li class="menu-item sign-up">
-            <%= link_to("Sign Up", "/users/sign_up") %>
-          </li>
+            <% else %>
+                <li class="menu-item sign-in">
+                <%= link_to("Sign In", "/users/sign_in") %>
+                </li>
+
+                <li class="menu-item sign-up">
+                <%= link_to("Sign Up", "/users/sign_up") %>
+            </li>
         <% end %>
       </ul>
  
