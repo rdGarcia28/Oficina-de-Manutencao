@@ -26,9 +26,9 @@
         <td><%= cliente.data_entrega %></td>
         <td><%= cliente.status %></td>
         <td><%= cliente.valor %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', cliente %></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+        <td><%= link_to 'Excluir', cliente, method: :delete, data: { confirm: 'Deseja realmente exlcuir' } %></td>
       </tr>
     <% end %>
   </tbody>
