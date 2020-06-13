@@ -28,7 +28,7 @@
         <td><%= cliente.valor %></td>
         <td><%= link_to 'Exibir', cliente %></td>
         <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Excluir', cliente, method: :delete, data: { confirm: 'Deseja realmente exlcuir' } %></td>
+        <td><%= link_to 'Excluir', cliente, method: :delete, data: { confirm: 'Deseja realmente exlcuir?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,5 @@
 
 <br>
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Adicionar novo', new_cliente_path %>
+<li class="menu-item"><%= link_to("Voltar", "home/index") %></li>
